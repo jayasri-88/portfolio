@@ -8,13 +8,14 @@ import { Education } from "@/components/Education";
 import { Achievements } from "@/components/Achievements";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import profile from "@/assets/profile.jpg";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main>
-        <Hero />
+        <Hero profile={profile} />
         <About />
         <Skills />
         <Projects />

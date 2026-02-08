@@ -1,12 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profile from "../assets/profile.jpg";
+import profile from "@/assets/profile.jpg";
 
 
 export function Hero() {
-  // Path to the image you provided. Place the image under public/assets/images/profile.jpg
-  const LOVEABLE_AVATAR = "src/assets/profile.jpg";
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated gradient blobs */}
@@ -97,7 +95,7 @@ export function Hero() {
             <div className="relative">
               <div className="w-56 h-56 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full bg-gradient-to-br from-cyber-blue via-cyber-cyan to-cyber-purple p-1">
                 <div className="w-full h-full rounded-full bg-background flex items-center justify-center overflow-hidden">
-                  <img src={LOVEABLE_AVATAR} alt="Profile" className="w-full h-full object-cover" />
+                  <img src={profile} alt="profile" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div className="absolute -z-10 inset-0 bg-gradient-to-br from-cyber-blue/30 to-cyber-purple/30 rounded-full blur-3xl" />
