@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   // Path to the image you provided. Place the image under public/assets/images/profile.jpg
-  const LOVEABLE_AVATAR = "/assets/images/profile.jpg";
+  const LOVEABLE_AVATAR = "src/assets/profile.jpg";
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated gradient blobs */}
