@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import profile from "@/assets/profile.jpg";
 
 export function Hero() {
   // Path to the image you provided. Place the image under public/assets/images/profile.jpg
