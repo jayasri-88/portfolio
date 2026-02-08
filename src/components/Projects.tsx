@@ -11,7 +11,7 @@ const projects = [
     tech: ["Python", "CNN", "Streamlit"],
     icon: Leaf,
     github: "https://github.com/jayasri-88",
-    deploy:"https://waste-best.streamlit.app/",
+    deploy: "https://waste-best.streamlit.app/",
     color: "from-emerald-500/20 to-green-500/20",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     tech: ["Python", "CNN", "OCR"],
     icon: FileSearch,
     github: "https://github.com/jayasri-88",
-    deploy:"https://github.com/jayasri-88",
+    deploy: "https://github.com/jayasri-88",
     color: "from-amber-500/20 to-orange-500/20",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     tech: ["MERN Stack", "Maps API", "Algorithms"],
     icon: Map,
     github: "https://github.com/jayasri-88",
-    deploy:"https://ambulance-routing.streamlit.app/",
+    deploy: "https://ambulance-routing.streamlit.app/",
     color: "from-rose-500/20 to-red-500/20",
   },
   {
@@ -41,7 +41,7 @@ const projects = [
     tech: ["React", "Node.js", "Generative AI"],
     icon: Lightbulb,
     github: "https://github.com/jayasri-88",
-    deploy:"https://genz-wheat.vercel.app/",
+    deploy: "https://genz-wheat.vercel.app/",
     color: "from-cyber-blue/20 to-cyber-purple/20",
   },
 ];
@@ -85,6 +85,7 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-3">
+                    {/* GitHub Button */}
                     <Button
                       size="sm"
                       variant="outline"
@@ -95,9 +96,22 @@ export function Projects() {
                         <Github className="mr-2 h-4 w-4" /> GitHub
                       </a>
                     </Button>
-                    <Button size="sm" variant="ghost" className="text-muted-foreground" disabled>
-                      <a href={project.deploy} target="_blank" >
-                      <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+
+                    {/* Live Demo Button */}
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      className="text-muted-foreground"
+                      asChild
+                      disabled={!project.deploy}
+                    >
+                      <a
+                        href={project.deploy || "#"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`${!project.deploy ? "pointer-events-none opacity-50" : ""}`}
+                      >
+                        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                       </a>
                     </Button>
                   </div>
