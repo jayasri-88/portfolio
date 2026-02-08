@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import profile from "../../assets/profile.jpg";
+import profile from "../assets/profile.jpg";
 
 
 export function Hero() {
